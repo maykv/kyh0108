@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // 프로필 내용 생성
         return `
             <div class="popup-content">
-                <img src="images/profile_a.png" alt="프로필 사진" class="profile-pic" />
+                <img src="images/profile_b.png" alt="프로필 사진" class="profile-pic" />
                 <div class="info">
                     <p><strong>이름:</strong> 김영환 <small>(a.k.a 영환띠)</small></p>
                     <p><strong>생일:</strong> 1월 8일</p>
