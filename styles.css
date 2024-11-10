@@ -1,0 +1,192 @@
+@font-face {
+    font-family: 'DungGeunMo';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #0c0b10;
+    color: #182f4a;
+    font-family: 'DungGeunMo', 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #2e374b;
+    padding: 10px;
+    text-align: left;
+}
+
+.navbar a {
+    color: #cad1da;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #4a5a70;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #738baa;
+    min-width: 120px;
+    border: 1px solid #6f85a0;
+    z-index: 1;
+    top: calc(100% + 5px);
+    left: 0;
+}
+
+.dropdown-content a {
+    color: #182f4a;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #4a5a70;
+    color: #cad1da;
+}
+
+.container {
+    background-color: #738baa;
+    border: 2px solid #9fa9b5;
+    padding: 20px;
+    width: 80%;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: left;
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.icon-image {
+    width: 48px;  /* 아이콘 크기 조정 */
+    height: 48px; /* 아이콘 크기 조정 */
+    background-size: cover;
+}
+
+.icon1 {
+    background-image: url('images/profile.png'); /* 아이콘 1 */
+}
+
+.icon2 {
+    background-image: url('images/career.png'); /* 아이콘 2 */
+}
+
+.icon3 {
+    background-image: url('images/staff.png'); /* 아이콘 3 */
+}
+
+.icon-label {
+    margin-top: 5px;
+    color: #cad1da;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #cad1da;
+    border: 1px solid #6f85a0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    width: 600px; /* 팝업 너비 */
+}
+
+.popup-header {
+    background-color: #2e374b; /* 헤더 배경색 */
+    color: #9fa9b5;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: move; /* 드래그할 수 있음을 나타내는 커서 */
+}
+
+.info {
+    display: flex;
+    flex-direction: column; /* 정보를 세로로 정렬 */
+    align-items: flex-start; /* 왼쪽 정렬 */
+    padding-left: 5px; /* 텍스트를 오른쪽으로 이동시키기 위한 왼쪽 패딩 추가 */
+}
+
+.popup-content {
+    padding: 20px;
+    display: flex; /* 내용의 기본 정렬을 세로로 설정 */
+    flex-direction: column; /* 세로 정렬 */
+}
+
+.info {
+    display: flex;
+    flex-direction: column; /* 정보를 세로로 정렬 */
+    align-items: flex-start; /* 왼쪽 정렬 */
+    padding-left: 5px; /* 텍스트를 오른쪽으로 이동시키기 위한 왼쪽 패딩 추가 */
+}
+
+.info p {
+    margin: 10px 0; /* 각 단락 간의 간격을 추가 */
+}
+
+.profile-pic {
+    width: 150px; /* 프로필 사진 크기 */
+    height: 150px;
+    border-radius: 0; /* 둥글지 않게 설정 */
+    margin-bottom: 20px; /* 아래쪽 여백 추가 */
+}
+
+
+.info {
+    display: flex;
+    flex-direction: column; /* 정보를 세로로 정렬 */
+    align-items: flex-start; /* 왼쪽 정렬 */
+}
+
+
+.close-btn {
+    background: none;
+    border: none;
+    color: #9fa9b5;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.profile-pic {
+    width: 150px; /* 프로필 사진 크기 */
+    height: 150px;
+    border-radius: 0; /* 둥글지 않게 설정 */
+    margin-bottom: 20px; /* 아래쪽 여백 추가 */
+}
+
+
+a {
+    text-decoration: none;
+    color: mediumaquamarine;
+}

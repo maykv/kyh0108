@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KYH OS</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @font-face {
+            font-family: 'DungGeunMo';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #0c0b10; /* 어두운 배경 */
+            color: #ffffff; /* 글자 색상 흰색 */
+            font-family: 'DungGeunMo', 'Courier New', Courier, monospace; /* 지정된 폰트 */
+        }
+
+        .logo {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .loader {
+            width: 300px;
+            height: 30px;
+            border: 2px solid #444; /* 어두운 테두리 */
+            background-color: #1a1a1a; /* 어두운 배경 */
+            position: relative;
+            box-shadow: none; /* 그림자 제거 */
+            margin-bottom: 10px; /* 로딩바와 퍼센트 간격 */
+        }
+
+        .loading-bar {
+            height: 100%;
+            background-color: #00bcd4; /* 민트색 */
+            animation: load 1.08s forwards;
+        }
+
+        @keyframes load {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 100%;
+            }
+        }
+
+        .percentage {
+            font-size: 18px;
+            color: #ffffff; /* 퍼센트 글자 색상 */
+        }
+
+        .welcome {
+            font-size: 36px;
+            margin-top: 20px;
+            display: none; /* 초기에는 숨김 */
+        }
+
+        .version {
+            font-size: 22px;
+            margin-top: 20px; /* 간격 추가 */
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">KYH OS</div>
+    <div class="loader">
+        <div class="loading-bar"></div>
+    </div>
+    <div class="percentage" id="percentage">0%</div> <!-- 퍼센트 표시 -->
+
+    <div class="welcome" id="welcome">환영합니다</div> <!-- 환영 메시지 -->
+    <div class="version" id="version">KYH OS 1.0</div> <!-- 버전 표시 -->
+
+    <script>
+        // 로딩 진행 상황 표시
+        const loadingBar = document.querySelector('.loading-bar');
+        const percentageText = document.getElementById('percentage');
+        const welcomeText = document.getElementById('welcome');
+        const loader = document.querySelector('.loader');
+        const versionText = document.getElementById('version');
+
+        let progress = 0;
+
+        const interval = setInterval(() => {
+            progress += 10; // 10%씩 증가
+            percentageText.textContent = `${progress}%`; // 퍼센트 텍스트 업데이트
+            if (progress >= 100) {
+                clearInterval(interval); // 100%에 도달하면 인터벌 종료
+                setTimeout(() => {
+                    loader.style.display = 'none'; // 로딩창 숨기기
+                    percentageText.style.display = 'none'; // 퍼센트 숨기기
+                    welcomeText.style.display = 'block'; // 환영 메시지 표시
+                    versionText.style.display = 'block'; // 버전 표시
+                    
+                    // 2초 후에 windows.html로 리다이렉트
+                    setTimeout(() => {
+                        window.location.href = "windows.html";
+                    }, 2000); // 2초 유지
+                }, 200); // 약간의 지연 후 실행
+            }
+        }, 108); // 1.08초 동안 10%씩 증가
+    </script>
+</body>
+</html>
