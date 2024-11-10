@@ -155,14 +155,6 @@ body {
     margin: 10px 0; /* 각 단락 간의 간격을 추가 */
 }
 
-.profile-pic {
-    width: 150px; /* 프로필 사진 크기 */
-    height: 150px;
-    border-radius: 0; /* 둥글지 않게 설정 */
-    margin-bottom: 20px; /* 아래쪽 여백 추가 */
-}
-
-
 .info {
     display: flex;
     flex-direction: column; /* 정보를 세로로 정렬 */
@@ -179,8 +171,8 @@ body {
 }
 
 .profile-pic {
-    width: 150px; /* 프로필 사진 크기 */
-    height: 150px;
+    width: 391.285px; /* 프로필 사진 크기 */
+    height: 220px;
     border-radius: 0; /* 둥글지 않게 설정 */
     margin-bottom: 20px; /* 아래쪽 여백 추가 */
 }
