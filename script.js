@@ -117,8 +117,9 @@ document.addEventListener('DOMContentLoaded', function() {
                         <p><strong>남자 보컬</strong>: 초코섬</p>
                         <h3>그래픽</h3>
                         <p><strong>일러스트레이터</strong>: ebeb</p>
-                        <p><strong>서브 일러스트레이터</strong>: 연어초밥밥밥</p>
-                        <p><strong>디자인</strong>: 김메이</p>
+                        <p><strong>일러스트레이터</strong>: 연어초밥밥밥</p>
+                        <p><strong>일러스트레이터</strong>: 돌멩핑</p>
+                        <p><strong>디자인</strong>: 김꽁치</p>
                         <h3>영상</h3>
                         <p><strong>애니메이팅</strong>: 김영환</p>
                         <p><strong>편집</strong>: 김영환</p>
